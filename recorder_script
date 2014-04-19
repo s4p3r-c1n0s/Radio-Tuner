@@ -1,0 +1,6 @@
+#!/bin/bash
+for i in {1..1441..10}
+   do
+     a=`expr 330 + $i`
+     echo "/opt/fIcy/./fIcy -m localhost 8000 /vorbis.mp3 -o otto -s .mp3 -t -M 585s > "`date --date="now + $a min" +"%s".mp3`"" | at now + $i min
+done
